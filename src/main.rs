@@ -3,5 +3,5 @@ mod files {
 }
 
 fn main() {
-    println!("{:?}", files::index_html);
+    println!("{:?}", files::INDEX_HTML);
 }

@@ -39,7 +39,8 @@ fn main() {
 
 // Helper function to sanitize file names into valid Rust identifiers
 fn sanitize_identifier(name: &str) -> String {
-    name.chars()
+    name.to_uppercase()
+        .chars()
         .map(|c| if c.is_alphanumeric() { c } else { '_' })
         .collect()
 }
