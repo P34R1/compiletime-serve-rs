@@ -4,7 +4,7 @@ extern crate rocket;
 use rocket::response::{content::RawHtml, status::NotFound};
 
 use include_dir::{include_dir, Dir};
-static PROJECT_DIR: Dir = include_dir!("dist");
+const PROJECT_DIR: Dir = include_dir!("dist");
 
 #[get("/<path>")]
 fn files(path: &str) -> Result<RawHtml<&str>, NotFound<&str>> {
